@@ -8,9 +8,42 @@
   padding: 2em 0;
 }
 
+.padding-top {
+  margin-top: 4em;
+}
+
 .header-text {
   display: block;
   font-weight: bold;
+}
+
+.title {
+  text-align: center;
+}
+.title h1 {
+  margin-bottom: 0.5em;
+}
+.title p {
+  font-size: 1.4rem;
+  padding: 0 1em 0.5em 1em;
+}
+.title a {
+  display: inline-block;
+  margin: 2em 0;
+  position: relative;
+  text-decoration: none;
+  color: #222831;
+}
+.title a::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 50%;
+  height: 5px;
+  width: 110%;
+  border-radius: 10px;
+  background-color: #222831;
+  translate: -50% 0;
 }
 
 *,
@@ -34,6 +67,13 @@ body {
 }
 
 .nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #dddddd;
+  z-index: 101;
+}
+.nav .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,6 +187,35 @@ body {
   background-color: #222831;
 }
 
+.products__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 4em;
+}
+.products__wine {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5em 1em;
+  height: 280px;
+  width: 260px;
+  background-color: #d2d2d2;
+}
+.products__wine img {
+  width: 50%;
+  height: 50%;
+}
+.products__wine--title {
+  font-weight: bold;
+}
+.products__wine--bottom {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .nav__logo {
     font-size: 2.8rem;
@@ -156,6 +225,16 @@ body {
   }
   .header__text {
     font-size: 3.6rem;
+  }
+  .products__box {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .products__title {
+    font-size: 3rem;
+  }
+  .products__text {
+    font-size: 1.6rem !important;
   }
 }
 @media (min-width: 992px) {
@@ -195,6 +274,20 @@ body {
   }
   .header {
     width: 98%;
+  }
+  .products__wine {
+    height: 380px;
+    width: 360px;
+  }
+  .products__wine img {
+    width: 60%;
+    height: 60%;
+  }
+  .products__title {
+    font-size: 4rem;
+  }
+  .products__text {
+    font-size: 2.4rem;
   }
 }
 @media (min-width: 1200px) {

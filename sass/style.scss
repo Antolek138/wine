@@ -22,11 +22,19 @@ body {
 }
 
 .nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 1em;
-	height: 60px;
+	position: sticky;
+	top: 0;
+	left: 0;
+	background-color: c.$bg-color;
+	z-index: 101;
+
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1em;
+		height: 60px;
+	}
 
 	&__logo {
 		font-size: 2.2rem;
@@ -153,6 +161,41 @@ body {
 	}
 }
 
+.products {
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		margin-top: 4em;
+	}
+
+	&__wine {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+		padding: 0.5em 1em;
+		height: 280px;
+		width: 260px;
+		background-color: c.$wine-bg;
+
+		img {
+			width: 50%;
+			height: 50%;
+		}
+
+		&--title {
+			font-weight: bold;
+		}
+
+		&--bottom {
+			text-align: center;
+		}
+	}
+}
+
 @media (min-width: 768px) {
 	.nav {
 		&__logo {
@@ -167,6 +210,21 @@ body {
 
 		&__text {
 			font-size: 3.6rem;
+		}
+	}
+
+	.products {
+		&__box {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__title{
+			font-size: 3rem;
+		}
+
+		&__text{
+			font-size: 1.6rem !important;
 		}
 	}
 }
@@ -219,6 +277,26 @@ body {
 
 	.header {
 		width: 98%;
+	}
+
+	.products {
+		&__wine{
+			height: 380px;
+			width: 360px;
+
+			img {
+				width: 60%;
+				height: 60%;
+			}
+		}
+
+		&__title {
+			font-size: 4rem;
+		}
+
+		&__text {
+			font-size: 2.4rem;
+		}
 	}
 }
 
