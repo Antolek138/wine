@@ -184,7 +184,7 @@ body {
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-		background-image: url('../img/wine-opinion-small.jpg');
+		background-image: url('../img/wine-opinion-big.jpg');
 
 		&::after {
 			position: absolute;
@@ -251,10 +251,6 @@ body {
 
 @media (min-width: 576px) {
 	.opinion {
-		&__photo {
-			background-image: url('../img/wine-opinion-big.jpg');
-		}
-
 		&__text {
 			width: 350px;
 		}
