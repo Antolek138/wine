@@ -249,6 +249,57 @@ body {
 	}
 }
 
+.blog {
+	background-color: c.$bg-color-three;
+
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 50px;
+		margin-top: 2em;
+		padding: 0 1em;
+	}
+
+	&__page {
+		width: 100%;
+	}
+
+	&__photo {
+		height: clamp(160px, 180px, 200px);
+		width: 100%;
+		background-size: cover;
+
+		&--one {
+			background-image: url('../img/blog-photo-one.webp');
+		}
+
+		&--two {
+			background-image: url('../img/blog-photo-two.webp');
+		}
+
+		&--three {
+			background-image: url('../img/blog-photo-three.webp');
+		}
+	}
+
+	&__title {
+		margin: 1em 0;
+		font-size: 1.8rem;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		color: c.$text-color-two;
+	}
+
+	&__autor {
+		margin: 1em 0;
+		font-size: 1.4rem;
+	}
+}
+
 @media (min-width: 576px) {
 	.opinion {
 		&__text {
@@ -286,6 +337,21 @@ body {
 
 		&__text {
 			font-size: 1.6rem !important;
+		}
+	}
+
+	.blog {
+		&__box {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__page {
+			width: 60%;
+		}
+
+		&__photo{
+			height: clamp(200px, 240px, 260px);
 		}
 	}
 }
@@ -371,6 +437,12 @@ body {
 
 		&--three {
 			display: none;
+		}
+	}
+
+	.blog{
+		&__page{
+			width: 450px;
 		}
 	}
 }
