@@ -1,5 +1,6 @@
 const bars = document.querySelector('.nav__bars')
 const menu = document.querySelector('.nav__menu')
+const navItem = document.querySelectorAll('.nav__item')
 const btnNext = document.querySelector('.header__btn--next')
 const btnPrev = document.querySelector('.header__btn--prev')
 const btnRevOne = document.querySelector('.opinion--one')
@@ -59,6 +60,13 @@ const sliderOpinion = index => {
 const menuActive = () => {
 	bars.classList.toggle('nav__bars--active')
 	menu.classList.toggle('nav__menu--active')
+
+	navItem.forEach(item => {
+		item.addEventListener('click', () => {
+			bars.classList.remove('nav__bars--active')
+			menu.classList.remove('nav__menu--active')
+		})
+	})
 }
 
 bars.addEventListener('click', menuActive)
