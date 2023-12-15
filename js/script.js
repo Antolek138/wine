@@ -69,6 +69,16 @@ const menuActive = () => {
 	})
 }
 
+const data = () => {
+	const span = document.querySelector('.data')
+
+	const date = new Date()
+	const year = date.getFullYear()
+
+	span.textContent = year + '.'
+}
+
+data()
 bars.addEventListener('click', menuActive)
 btnNext.addEventListener('click', nextSlide)
 btnPrev.addEventListener('click', prevSlide)

@@ -36,10 +36,6 @@ body {
 		height: 60px;
 	}
 
-	&__logo {
-		font-size: 2.2rem;
-		font-weight: bold;
-	}
 	&__menu {
 		position: absolute;
 		top: 60px;
@@ -300,6 +296,45 @@ body {
 	}
 }
 
+.footer {
+	text-align: center;
+	color: c.$bg-color;
+	background-color: c.$footer;
+
+	&__item {
+		margin-top: 1.5em;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: c.$text-color-two;
+	}
+
+	&__media {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+	}
+
+	i {
+		font-size: 2.4rem;
+	}
+
+	hr {
+		position: absolute;
+		left: 50%;
+		width: 80%;
+		translate: -50% 0;
+		border-radius: 10px;
+	}
+
+	&__bottom {
+		margin-top: 4em;
+		padding: 0 2em;
+	}
+}
+
 @media (min-width: 576px) {
 	.opinion {
 		&__text {
@@ -309,12 +344,6 @@ body {
 }
 
 @media (min-width: 768px) {
-	.nav {
-		&__logo {
-			font-size: 2.8rem;
-		}
-	}
-
 	.header {
 		&__photo {
 			height: clamp(460px, 580px, 600px);
@@ -350,7 +379,7 @@ body {
 			width: 60%;
 		}
 
-		&__photo{
+		&__photo {
 			height: clamp(200px, 240px, 260px);
 		}
 	}
@@ -440,16 +469,48 @@ body {
 		}
 	}
 
-	.blog{
-		&__page{
+	.blog {
+		&__page {
 			width: 450px;
+		}
+	}
+
+	.footer {
+		&__item {
+			display: inline-block;
+			margin: 2em 1em 0 1em;
+		}
+
+		i {
+			font-size: 3.2rem;
+			transition: color 0.3s;
+		}
+
+		i:hover {
+			&:nth-child(1) {
+				color: #0165e1;
+			}
+
+			&:nth-child(2) {
+				color: #25d366;
+			}
+
+			&:nth-child(3) {
+				color: #00b2ff;
+			}
+		}
+
+		hr {
+			width: clamp(10%, 25%, 40%);
 		}
 	}
 }
 
 @media (min-width: 1200px) {
 	.nav {
-		padding: 0;
+		.wrapper {
+			padding: 0;
+		}
 	}
 
 	.header {
