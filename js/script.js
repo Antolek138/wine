@@ -35,14 +35,6 @@ const slider = index => {
 	sliderWrapper.style.transform = `translateX(${displacement}px)`
 }
 
-function nextSlide() {
-	slider(currentSlide + 1)
-}
-
-function prevSlide() {
-	slider(currentSlide - 1)
-}
-
 // //!Slider w sekcji opinion
 const sliderOpinion = index => {
 	if (index < 0) {
@@ -80,8 +72,8 @@ const data = () => {
 
 data()
 bars.addEventListener('click', menuActive)
-btnNext.addEventListener('click', nextSlide)
-btnPrev.addEventListener('click', prevSlide)
+btnNext.addEventListener('click', () => slider(0))
+btnPrev.addEventListener('click', () => slider(1))
 
 btnRevOne.addEventListener('click', () => sliderOpinion(0))
 btnRevTwo.addEventListener('click', () => sliderOpinion(1))
